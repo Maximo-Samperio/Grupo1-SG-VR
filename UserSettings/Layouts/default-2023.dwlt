@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1536
     height: 774
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 371}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 41
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -97,7 +97,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 774
-  m_MinSize: {x: 875, y: 371}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 117
+  controlID: 100
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 40
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 341.59998
     height: 724
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -916,9 +916,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -0.06503162, y: 1.5376381, z: -0.17496212}
+    m_Target: {x: -3.7247915, y: 3.2356725, z: 1.307818}
     speed: 2
-    m_Value: {x: -0.06503162, y: 1.5376381, z: -0.17496212}
+    m_Value: {x: -3.7247915, y: 3.2356725, z: 1.307818}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -964,13 +964,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.4433437, y: 0.09301333, z: -0.046321154, w: 0.8903317}
+    m_Target: {x: 0.20190193, y: 0.37826946, z: -0.08491372, w: 0.899468}
     speed: 2
-    m_Value: {x: 0.44327864, y: 0.09407971, z: -0.04685216, w: 0.8902011}
+    m_Value: {x: 0.20194222, y: 0.37770993, z: -0.08478812, w: 0.89964753}
   m_Size:
-    m_Target: 0.037436068
+    m_Target: 0.6952551
     speed: 2
-    m_Value: 0.037437253
+    m_Value: 0.69525486
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1908,10 +1908,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 24.399994}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b401ffff0002ffff2202ffff3002ffffa611ffff501bffff121effff
+      m_ExpandedIDs: faf9ffff36faffffe8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2022,7 +2022,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/9. Imports/Oculus Hands/Prefabs
+    - Assets/6. Materials
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -2032,16 +2032,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/9. Imports/Oculus Hands/Prefabs
+  - Assets/6. Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\SGVR\Grupo1-SG-VR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 9a2c0100
-    m_LastClickedID: 76954
-    m_ExpandedIDs: 00000000d0160100e2160100e4160100762c0100782c0100882d01008a2d01008c2d01008e2d0100902d0100922d0100942d0100a22d0100de2d0100e62d0100402e010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 11}
+    m_SelectedIDs: c0b60000
+    m_LastClickedID: 46784
+    m_ExpandedIDs: 000000001ab60000c6b60000c8b60000f4b6000006b70000dcbd0000debd0000e0bd0000e2bd0000e4bd000096cc000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2070,7 +2070,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000001ab60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2099,24 +2099,24 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 1e12000030630000a81000007c1a0000083f00001e840000228400002e84000028840000129a0000000000004e490100669f04006aa10400
+    m_ExpandedInstanceIDs: 1e12000030630000a81000007c1a0000083f00001e840000228400002e84000028840000129a00004e490100669f04006aa1040000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Right Hand Model
-      m_OriginalName: Right Hand Model
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 76958
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
