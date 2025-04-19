@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.Pool;
 
 public class DamageZoneMovement : MonoBehaviour
 {
@@ -12,6 +9,7 @@ public class DamageZoneMovement : MonoBehaviour
 
     private float _hitTimer;
     private bool _hitPlayer;
+    private ObjectPool<DamageZoneMovement> _pool; 
     
     // private PlayerLifeController playerRef;
 
@@ -25,6 +23,13 @@ public class DamageZoneMovement : MonoBehaviour
     void Update()
     {
         MoveFordward();
+    }
+
+    public void Init(ObjectPool<DamageZoneMovement> pool)
+    {
+        gameObject.SetActive(true);
+
+        _pool = pool;
     }
 
     private void CheckIfHit()
@@ -44,6 +49,14 @@ public class DamageZoneMovement : MonoBehaviour
         transform.Translate(Vector3.forward * _zoneSpeed * Time.deltaTime * -1f); 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DamageZoneDestroyer"))
+        {
+            Destroy();
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -61,4 +74,6 @@ public class DamageZoneMovement : MonoBehaviour
             _hitPlayer = false;
         }
     }
+
+    private void Destroy() => _pool.Release(this);
 }
