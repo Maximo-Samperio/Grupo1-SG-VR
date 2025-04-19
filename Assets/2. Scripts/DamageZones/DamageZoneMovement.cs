@@ -25,9 +25,12 @@ public class DamageZoneMovement : MonoBehaviour
         MoveFordward();
     }
 
-    public void Init(ObjectPool<DamageZoneMovement> pool)
+    public void Init(ObjectPool<DamageZoneMovement> pool, bool firstSpawn)
     {
-        gameObject.SetActive(true);
+        if(firstSpawn)
+            gameObject.SetActive(false);
+        else
+            gameObject.SetActive(true);
 
         _pool = pool;
     }
