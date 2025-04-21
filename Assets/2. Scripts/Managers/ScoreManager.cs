@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;    // Or TMPro if you prefer
 
@@ -9,7 +10,7 @@ public class ScoreManager : MonoBehaviour
 
     [Header("UI Settings")]
     [Tooltip("A UI Text (or TextMeshProUGUI) to show the current score.")]
-    public Text scoreText;  // ⇢ change to TextMeshProUGUI if needed
+    public TextMeshProUGUI scoreText;  // ⇢ change to TextMeshProUGUI if needed
 
     private int currentScore = 0;
 
