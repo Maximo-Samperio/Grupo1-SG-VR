@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1b34217143ce148989eb5d4cc2ddd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _BigDamageZone: {fileID: 0}
-  _feetDamageZone: {fileID: 0}
+  _timeBetweenZones: 8
+  _BigDamageZone: {fileID: 2627372657188781741, guid: 04dd9f12448e0d24ba5f2b2681aeb61b, type: 3}
+  _feetDamageZone: {fileID: 3177805537521351860, guid: 5095add96dd5e404e9489eae9e786a92, type: 3}
   _spawnPoint1: {fileID: 0}
   _spawnPoint2: {fileID: 0}
   _spawnPoint3: {fileID: 0}
