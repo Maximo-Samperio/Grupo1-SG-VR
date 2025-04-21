@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - DamageZoneDestroyer
+  - Bullet
   layers:
   - Default
   - TransparentFX

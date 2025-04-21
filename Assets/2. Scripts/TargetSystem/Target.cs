@@ -6,7 +6,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [Header("Hit Settings")]
-    [Tooltip("Tag used by your bullet/projectile.")]
+    [Tooltip("Tag used by bullet/projectile.")]
     public string bulletTag = "Bullet";
 
     [Header("Movement Settings")]
