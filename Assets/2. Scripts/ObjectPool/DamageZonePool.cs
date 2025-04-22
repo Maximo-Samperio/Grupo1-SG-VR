@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -7,22 +7,14 @@ public class DamageZonePool : MonoBehaviour
     [SerializeField] private float _timeBetweenZones;
     [SerializeField] private DamageZoneMovement _BigDamageZone;
     [SerializeField] private DamageZoneMovement _feetDamageZone;
-    [SerializeField] private Transform _spawnPoint1;
-    [SerializeField] private Transform _spawnPoint2;
-    [SerializeField] private Transform _spawnPoint3;
-
+    [SerializeField] private List<Transform> _spawnPoints;
+    
     private ObjectPool<DamageZoneMovement> _pool;
     private float _spawnZoneTimer;
 
     private void Awake()
     {
         _pool = new ObjectPool<DamageZoneMovement>(CreateZone, null, OnPutBackInPool, defaultCapacity: 6);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame
@@ -50,22 +42,7 @@ public class DamageZonePool : MonoBehaviour
         return zone;
     }
 
-    private Transform GetRandomSpawnPoint()
-    {
-        switch (Random.Range(0, 3))
-        {
-            case 0:
-                return _spawnPoint1;
-
-            case 1:
-                return _spawnPoint2;
-
-            case 2:
-                return _spawnPoint3; 
-        }
-
-        return null;
-    }
+    private Transform GetRandomSpawnPoint() => _spawnPoints[Random.Range(0, _spawnPoints.Count)];
 
     private DamageZoneMovement GetRandomPrefabToSpawn()
     {
