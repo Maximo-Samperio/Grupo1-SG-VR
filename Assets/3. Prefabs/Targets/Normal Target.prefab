@@ -125,3 +125,6 @@ MonoBehaviour:
   isMoving: 0
   waypoints: []
   moveSpeed: 2
+  respawnPoints: []
+  respawnDelay: 5
+  occupancyRadius: 1
