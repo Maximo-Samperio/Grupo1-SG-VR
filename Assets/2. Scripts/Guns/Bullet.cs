@@ -23,6 +23,10 @@ public class Bullet : MonoBehaviour
 
         if (rb != null)
         {
+            // Reset any previous velocity or rotation
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+
             // Add force to the bullet to make it move
             rb.AddForce(shootingPoint.forward * bulletSpeed, ForceMode.Impulse);
         }
@@ -34,10 +38,10 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        if(_isActive)
+        if (_isActive)
         {
             Destroy();
-        } 
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -54,4 +58,4 @@ public class Bullet : MonoBehaviour
         _pool.Release(this);
     }
 
-} 
+}
