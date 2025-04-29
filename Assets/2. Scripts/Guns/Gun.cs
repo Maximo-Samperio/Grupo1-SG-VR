@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject bulletPrefab;   // The bullet prefab to instantiate
-    public Transform firePoint;       // Where the bullets spawn from
-    public float bulletForce = 2f;   // Speed of the bullet
+    [SerializeField] private GameObject bulletPrefab;   // The bullet prefab to instantiate
+    [SerializeField] private Transform firePoint;       // Where the bullets spawn from
+    [SerializeField] private float bulletForce;   // Speed of the bullet
+    
+    private BulletsPool _mag;
+    private bool canShoot;
+
+    private void Awake()
+    {
+        _mag = GetComponent<BulletsPool>();
+        _mag._bulletSpeed = bulletForce;
+        _mag._spawnPoint = firePoint;
+
+        canShoot = true;
+    }
 
     public void Shoot()
     {
-        // Create the bullet at the firePoint's position and rotation
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.transform.rotation);
-
-        // Get the Rigidbody component from the bullet to apply force
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-
-        if (rb != null)
-        {
-            // Add force to the bullet to make it move
-            rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
+        if(canShoot) {
+            _mag.SpawnBullet();
+            canShoot = false;
+            StartCoroutine("StartBulletIntoChamberTime");
         }
+        
+    }
+
+    IEnumerator StartBulletIntoChamberTime()
+    {
+        yield return new WaitForSeconds(.4f);
+        canShoot = true;
     }
 }

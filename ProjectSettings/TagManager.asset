@@ -8,6 +8,7 @@ TagManager:
   - DamageZoneDestroyer
   - Bullet
   - ReloadChamber
+  - Target
   layers:
   - Default
   - TransparentFX
