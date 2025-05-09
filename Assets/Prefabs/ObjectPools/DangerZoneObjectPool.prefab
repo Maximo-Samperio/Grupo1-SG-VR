@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &468264543926388129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752847267060957908}
+  - component: {fileID: 1210119175864787663}
+  m_Layer: 0
+  m_Name: DangerZoneObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752847267060957908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468264543926388129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.888899, y: 4.4696665, z: -1.8820298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210119175864787663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468264543926388129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1b34217143ce148989eb5d4cc2ddd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeBetweenZones: 8
+  _BigDamageZone: {fileID: 2627372657188781741, guid: 04dd9f12448e0d24ba5f2b2681aeb61b, type: 3}
+  _feetDamageZone: {fileID: 3177805537521351860, guid: 5095add96dd5e404e9489eae9e786a92, type: 3}
+  _spawnPoint1: {fileID: 0}
+  _spawnPoint2: {fileID: 0}
+  _spawnPoint3: {fileID: 0}
