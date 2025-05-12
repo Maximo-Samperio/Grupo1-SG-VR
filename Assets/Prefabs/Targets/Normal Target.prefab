@@ -124,7 +124,21 @@ MonoBehaviour:
   targetType: 1
   isMoving: 0
   waypoints: []
-  moveSpeed: 2
-  respawnPoints: []
-  respawnDelay: 5
-  occupancyRadius: 1
+  moveSpeed: 4
+  respawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  respawnDelay: 2
+  occupancyRadius: 0.5
+  occupancyTag: Target
