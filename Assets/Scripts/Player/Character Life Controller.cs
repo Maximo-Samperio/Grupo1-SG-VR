@@ -16,11 +16,9 @@ public class CharacterLifeController : MonoBehaviour
 
     public void UpdateLife(float lifeSubstract)
     {
-        currentLife -= lifeSubstract;
+        currentLife -= lifeSubstract; 
 
-        playersVision.defaultParameters.apertureSize -= lifeSubstract/100;
-
-        Debug.Log(currentLife);
+        playersVision.defaultParameters.apertureSize = Mathf.Lerp(1f, 0f, lifeSubstract / 100);
 
         if (!StillAllive())
             SceneLoader.Instance.LoadMainMenu();
