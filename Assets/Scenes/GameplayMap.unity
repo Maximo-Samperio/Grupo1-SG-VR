@@ -9421,7 +9421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1075008832833446030, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.572
+      value: -34.35
       objectReference: {fileID: 0}
     - target: {fileID: 1075008832833446030, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9429,7 +9429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1075008832833446030, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.876
+      value: -32.58
       objectReference: {fileID: 0}
     - target: {fileID: 1075008832833446030, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9501,7 +9501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861814939643605697, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocomotionVignetteProviders.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1861814939643605697, guid: 3d836f6e96c099c43942407e4fed7c59, type: 3}
       propertyPath: m_LocomotionVignetteProviders.Array.data[0].m_Enabled
