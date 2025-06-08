@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class DamageZoneMovement : MonoBehaviour
+public class DamageZoneMovement : MonoBehaviour, IUpdateManager
 {
     [SerializeField] private float _zoneSpeed;
     [SerializeField] private float _zoneDamage;
@@ -15,14 +15,13 @@ public class DamageZoneMovement : MonoBehaviour
     private CharacterLifeController playerRef;
     private CharacterFilter playerFeed;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         _hitTimer = _zoneTimeBetweenHit;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void CustomUpdate()
     {
         MoveFordward();
         CheckIfHit();

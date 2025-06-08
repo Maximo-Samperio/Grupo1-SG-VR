@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Target : MonoBehaviour
+public class Target : MonoBehaviour, IUpdateManager
 {
     public enum TargetType { Normal = 1, Upgraded = 2, Golden = 5 }
 
@@ -42,10 +42,7 @@ public class Target : MonoBehaviour
         // grab everything once
         renderers = GetComponentsInChildren<Renderer>();
         mainCollider = GetComponent<Collider>();
-    }
 
-    void Start()
-    {
         if (isMoving && (waypoints == null || waypoints.Length == 0))
         {
             Debug.LogWarning($"[{name}] Patrol ON but no waypoints set. Disabling movement.");
@@ -53,7 +50,7 @@ public class Target : MonoBehaviour
         }
     }
 
-    void Update()
+    public void CustomUpdate()
     {
         if (isMoving)
             Patrol();

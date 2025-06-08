@@ -8,8 +8,7 @@ public class CharacterLifeController : MonoBehaviour
 
     private float currentLife;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         currentLife = maxLife;
     }

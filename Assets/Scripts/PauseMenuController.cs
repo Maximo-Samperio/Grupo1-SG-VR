@@ -11,19 +11,6 @@ public class PauseMenuController : MonoBehaviour
     private bool menuButtonPressed;
     private Transform playerPos;
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if(InputData.Instance._rightController.TryGetFeatureValue(CommonUsages.primaryButton, out menuButtonPressed) && menuButtonPressed)
-        {
-            //Activar animación de jugador entrando a la taberna
-            PauseCanvasRef.SetActive(true);
-            playerPos = PlayerRef.transform;
-            PlayerRef.transform.position = spawnPoint.position;
-            PlayerMovementRef.SetActive(false);
-        }*/
-    }
-
     public void EnterPauseMenu()
     {
         PauseCanvasRef.SetActive(true);
