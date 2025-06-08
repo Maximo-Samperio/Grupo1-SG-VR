@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class DamageZoneMovement : MonoBehaviour //NeedCustomUpdateObject, IUpdateManager
+public class DamageZoneMovement : NeedCustomUpdateObject, IUpdateManager
 {
     [SerializeField] private float _zoneSpeed;
     [SerializeField] private float _zoneDamage;
@@ -20,18 +20,11 @@ public class DamageZoneMovement : MonoBehaviour //NeedCustomUpdateObject, IUpdat
         _hitTimer = _zoneTimeBetweenHit;
     }
 
-    private void Update()
+    public override void CustomUpdate()
     {
         MoveFordward();
         CheckIfHit();
     }
-
-
-    /*public override void CustomUpdate()
-    {
-        MoveFordward();
-        CheckIfHit();
-    }*/
 
     public void Init(ObjectPool<DamageZoneMovement> pool, bool firstSpawn)
     {

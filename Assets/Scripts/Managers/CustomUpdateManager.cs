@@ -10,9 +10,9 @@ public class CustomUpdateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (var manager in _updateManagers)
+        for (int i = 0; i < _updateManagers.Count; i++)
         {
-            manager.CustomUpdate();
+            _updateManagers[i].CustomUpdate();
         }
     }
 
