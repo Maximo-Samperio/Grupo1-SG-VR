@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class DamageZonePool : MonoBehaviour, IUpdateManager
+public class DamageZonePool : MonoBehaviour //NeedCustomUpdateObject, IUpdateManager
 {
     [SerializeField] private float _timeBetweenZones;
     [SerializeField] private DamageZoneMovement _BigDamageZone;
@@ -17,7 +17,7 @@ public class DamageZonePool : MonoBehaviour, IUpdateManager
         _pool = new ObjectPool<DamageZoneMovement>(CreateZone, null, OnPutBackInPool, defaultCapacity: 6);
     }
 
-    public void CustomUpdate()
+    private void Update()
     {
         _spawnZoneTimer += Time.deltaTime;
 
@@ -27,6 +27,17 @@ public class DamageZonePool : MonoBehaviour, IUpdateManager
             _spawnZoneTimer = 0;
         }
     }
+
+    /*public override void CustomUpdate()
+    {
+        _spawnZoneTimer += Time.deltaTime;
+
+        if (_spawnZoneTimer > _timeBetweenZones)
+        {
+            SpawnDangerZone(false);
+            _spawnZoneTimer = 0;
+        }
+    }*/
 
     private void OnPutBackInPool(DamageZoneMovement zone)
     {

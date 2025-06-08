@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Target : MonoBehaviour, IUpdateManager
+public class Target : MonoBehaviour //NeedCustomUpdateObject, IUpdateManager
 {
     public enum TargetType { Normal = 1, Upgraded = 2, Golden = 5 }
 
@@ -50,11 +50,17 @@ public class Target : MonoBehaviour, IUpdateManager
         }
     }
 
-    public void CustomUpdate()
+    private void Update()
     {
         if (isMoving)
             Patrol();
     }
+
+    /*public override void CustomUpdate()
+    {
+        if (isMoving)
+            Patrol();
+    }*/
 
     void Patrol()
     {
