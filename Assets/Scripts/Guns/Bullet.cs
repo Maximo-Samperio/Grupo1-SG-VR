@@ -43,14 +43,6 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Target"))
-        {
-            Destroy();
-        }
-    }
-
     public void Destroy()
     {
         _isActive = false;

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class DamageZonePool : NeedCustomUpdateObject, IUpdateManager
+public class DamageZonePool : NeedCustomUpdateObject
 {
     [SerializeField] private float _timeBetweenZones;
     [SerializeField] private DamageZoneMovement _BigDamageZone;

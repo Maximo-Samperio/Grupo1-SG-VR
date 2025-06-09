@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class DamageZoneMovement : NeedCustomUpdateObject, IUpdateManager
+public class DamageZoneMovement : NeedCustomUpdateObject
 {
     [SerializeField] private float _zoneSpeed;
     [SerializeField] private float _zoneDamage;

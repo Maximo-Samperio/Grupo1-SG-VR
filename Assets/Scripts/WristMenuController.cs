@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR;
 
-public class WristMenuController : NeedCustomUpdateObject, IUpdateManager
+public class WristMenuController : NeedCustomUpdateObject
 {
     [SerializeField] private GameObject wristMenu;
 

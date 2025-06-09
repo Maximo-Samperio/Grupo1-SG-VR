@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class BulletsPool : MonoBehaviour
+public class BulletsPool: MonoBehaviour
 {
     [SerializeField] private Bullet _bulletPrefab;
 

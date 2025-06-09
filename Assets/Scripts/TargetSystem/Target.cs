@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Target : NeedCustomUpdateObject, IUpdateManager
+public class Target : NeedCustomUpdateObject
 {
     public enum TargetType { Normal = 1, Upgraded = 2, Golden = 5 }
 
@@ -70,6 +70,8 @@ public class Target : NeedCustomUpdateObject, IUpdateManager
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag(bulletTag)) return;
+
+        other.gameObject.GetComponent<Bullet>().Destroy();
 
         // score it
         ScoreManager.Instance.AddScore((int)targetType);

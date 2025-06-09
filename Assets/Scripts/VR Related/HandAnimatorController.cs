@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HandAnimatorController : MonoBehaviour
+public class HandAnimatorController : NeedCustomUpdateObject
 {
     [SerializeField] private InputActionProperty _inputTrigger;
     [SerializeField] private InputActionProperty _inputPinch;
 
     private Animator _anim;
 
-    private void Start()
+    private void Awake()
     {
         _anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    public override void CustomUpdate()
     {
         float triggerValue = _inputTrigger.action.ReadValue<float>();
         float pinchValue = _inputPinch.action.ReadValue<float>();

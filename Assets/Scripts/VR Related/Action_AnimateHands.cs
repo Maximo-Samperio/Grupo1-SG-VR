@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Action_AnimateHands : MonoBehaviour
+public class Action_AnimateHands : NeedCustomUpdateObject
 {
     #region Variables to use: 
 
@@ -13,15 +13,7 @@ public class Action_AnimateHands : MonoBehaviour
 
     #endregion
 
-    // Start is called before the first frame update
-    //private void Start()
-    //{
-        // Not used. Will be out until we need it. 
-    //}
-
-    // Update is called once per frame
-
-    private void Update()
+    public override void CustomUpdate()
     {
         ReadInputValues();
     }
