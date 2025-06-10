@@ -335,7 +335,6 @@ GameObject:
   - component: {fileID: 2475355263408419311}
   - component: {fileID: 2492230222041277280}
   - component: {fileID: 5204260894673840660}
-  - component: {fileID: 7859225914455370919}
   m_Layer: 3
   m_Name: Player-Opt
   m_TagString: Untagged
@@ -445,21 +444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   playersVision: {fileID: 1861814939643605697}
---- !u!114 &7859225914455370919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734821582145391379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a495f272ebc49e49b435b69e5eb8849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _cameraFilter: {fileID: 4021139269028674024}
-  _bigAreaColor: {r: 0.6, g: 0.3, b: 0.3, a: 0.5019608}
-  _smallAreaColor: {r: 0.4, g: 0.3, b: 0.6, a: 0.5019608}
+  _bigAreaColor: {r: 0.6, g: 0.3019608, b: 0.3019608, a: 0.5019608}
+  _smallAreaColor: {r: 0.40000004, g: 0.3019608, b: 0.6, a: 0.5019608}
 --- !u!1 &895691816655083999
 GameObject:
   m_ObjectHideFlags: 0

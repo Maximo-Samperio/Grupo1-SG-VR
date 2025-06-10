@@ -5,7 +5,7 @@ public class BulletsPool: MonoBehaviour
 {
     [SerializeField] private Bullet _bulletPrefab;
 
-    private ObjectPool<Bullet> _pool;
+    protected ObjectPool<Bullet> _pool;
     public float _bulletSpeed;
     public Transform _spawnPoint;
 
@@ -30,6 +30,6 @@ public class BulletsPool: MonoBehaviour
     {
         var bullet = _pool.Get();
 
-        bullet.Init(_pool, _spawnPoint, _bulletSpeed);
+        bullet.Init(_spawnPoint, _bulletSpeed);
     }
 }

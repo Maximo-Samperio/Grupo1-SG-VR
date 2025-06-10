@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class InputData : MonoBehaviour
+public class InputData : NeedCustomUpdateObject
 {
     public static InputData Instance;
 
@@ -19,7 +19,7 @@ public class InputData : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public override void CustomUpdate()
     {
         if (!_rightController.isValid || !_leftController.isValid)
             InitializeInputDevices();  

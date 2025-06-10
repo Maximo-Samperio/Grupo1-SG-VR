@@ -13,7 +13,6 @@ public class DamageZoneMovement : NeedCustomUpdateObject
     private ObjectPool<DamageZoneMovement> _pool; 
     
     private CharacterLifeController playerRef;
-    private CharacterFilter playerFeed;
 
     private void Awake()
     {
@@ -63,10 +62,9 @@ public class DamageZoneMovement : NeedCustomUpdateObject
         if (other.CompareTag("Player"))
         {
             playerRef = other.gameObject.GetComponent<CharacterLifeController>();
-            playerFeed = other.gameObject.GetComponent<CharacterFilter>();
 
-            if (playerFeed != null)
-                playerFeed.ActivateFilter(_amIBig);
+            if (playerRef != null)
+                playerRef.ActivateFilter(_amIBig);
 
             _hitPlayer = true;
         }
@@ -80,13 +78,13 @@ public class DamageZoneMovement : NeedCustomUpdateObject
 
             _hitPlayer = false;
 
-            if (playerFeed == null)
+            if (playerRef == null)
             {
-                playerFeed = other.gameObject.GetComponent<CharacterFilter>();
+                playerRef = other.gameObject.GetComponent<CharacterLifeController>();
             }
             else
             {
-                playerFeed.DeactivateFilter();
+                playerRef.DeactivateFilter();
             }
         }
     }

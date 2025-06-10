@@ -2,12 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class Bullet : MonoBehaviour
+public class Bullet : BulletsPool
 {
-    private ObjectPool<Bullet> _pool;
     private bool _isActive = false;
 
-    public void Init(ObjectPool<Bullet> pool, Transform shootingPoint, float bulletSpeed)
+    public void Init(Transform shootingPoint, float bulletSpeed)
     {
         transform.position = shootingPoint.position;
         transform.rotation = shootingPoint.rotation;
@@ -15,8 +14,6 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(true);
 
         _isActive = true;
-
-        _pool = pool;
 
         Rigidbody rb = GetComponent<Rigidbody>();
 
