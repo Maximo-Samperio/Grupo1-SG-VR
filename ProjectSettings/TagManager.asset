@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - ReloadChamber
   - Target
+  - Pause
   layers:
   - Default
   - TransparentFX

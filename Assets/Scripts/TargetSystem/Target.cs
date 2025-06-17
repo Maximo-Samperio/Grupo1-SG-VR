@@ -31,7 +31,7 @@ public class Target : NeedCustomUpdateObject
 
     // internals
     int currentWaypoint = 0;
-    Coroutine respawnRoutine;
+    public Coroutine respawnRoutine;
 
     // cache these so we can hide/show without deactivating the GameObject
     Renderer[] renderers;
@@ -67,18 +67,12 @@ public class Target : NeedCustomUpdateObject
             currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void ManageRespawnRoutine()
     {
-        if (!other.CompareTag(bulletTag)) return;
-
-        other.gameObject.GetComponent<Bullet>().Destroy();
-
-        // score it
-        ScoreManager.Instance.AddScore((int)targetType);
-
         // kick off hide+respawn
         if (respawnRoutine != null)
             StopCoroutine(respawnRoutine);
+
         respawnRoutine = StartCoroutine(HandleRespawn());
     }
 

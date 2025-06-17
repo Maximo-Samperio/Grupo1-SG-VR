@@ -1,10 +1,14 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using static Target;
 
 public class Bullet : BulletsPool
 {
     private bool _isActive = false;
+    private string targetTag = "Target";
+    private string pauseMenuTag = "Pause";
 
     public void Init(Transform shootingPoint, float bulletSpeed)
     {
@@ -36,6 +40,27 @@ public class Bullet : BulletsPool
 
         if (_isActive)
         {
+            Destroy();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag(targetTag))
+        {
+            Target TargetHit = other.GetComponent<Target>();
+
+            TargetHit.ManageRespawnRoutine();
+
+            ScoreManager.Instance.AddScore((int)TargetHit.targetType);
+
+            Destroy();
+        }
+
+        else if(other.CompareTag(pauseMenuTag))
+        {
+            other.GetComponent<PauseMenuController>().EnterPauseMenu();
+
             Destroy();
         }
     }
