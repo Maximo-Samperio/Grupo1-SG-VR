@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Gun : ObjectWithInteraction
+public class Gun : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;   // The bullet prefab to instantiate
     [SerializeField] private Transform firePoint;       // Where the bullets spawn from
@@ -12,7 +12,7 @@ public class Gun : ObjectWithInteraction
 
     private void Awake()
     {
-        _mag = new BulletsPool();
+        _mag = GetComponent<BulletsPool>();
         _mag._bulletSpeed = bulletForce;
         _mag._spawnPoint = firePoint;
 
