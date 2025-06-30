@@ -16,13 +16,11 @@ public class PauseMenuController : MonoBehaviour
         PauseCanvasRef.SetActive(true);
         playerPos = PlayerRef.transform.position;
         PlayerRef.transform.position = spawnPoint.position;
-        PlayerMovementRef.enabled = false;
     }
 
     public void LeavePause()
     {
         PauseCanvasRef.SetActive(false);
         PlayerRef.transform.position = playerPos;
-        PlayerMovementRef.enabled = true;
     }
 }
