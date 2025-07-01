@@ -9,7 +9,7 @@ public class CharacterLifeController : MonoBehaviour
     [SerializeField] private Color _bigAreaColor;
     [SerializeField] private Color _smallAreaColor;
 
-    private float currentLife;
+    public float currentLife;
 
     private void Awake()
     {

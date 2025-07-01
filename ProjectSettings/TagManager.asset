@@ -10,6 +10,7 @@ TagManager:
   - ReloadChamber
   - Target
   - Pause
+  - PauseLimits
   layers:
   - Default
   - TransparentFX

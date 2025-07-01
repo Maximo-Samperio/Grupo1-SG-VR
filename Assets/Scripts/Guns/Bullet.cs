@@ -63,6 +63,11 @@ public class Bullet : BulletsPool
 
             Destroy();
         }
+
+        else if (other.CompareTag("PauseLimits"))
+        {
+            Destroy();
+        }
     }
 
     public void Destroy()
